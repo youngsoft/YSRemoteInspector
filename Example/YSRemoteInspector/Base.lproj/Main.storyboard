@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="whP-gf-Uak">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="whP-gf-Uak">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -13,19 +13,175 @@
         <scene sceneID="wQg-tq-qST">
             <objects>
                 <viewController id="whP-gf-Uak" customClass="YSViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="uEw-UM-LJ8"/>
-                        <viewControllerLayoutGuide type="bottom" id="Mvr-aV-6Um"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="TpU-gO-2f1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uwk-ip-Ikb">
+                                <rect key="frame" x="16" y="86" width="131" height="30"/>
+                                <state key="normal" title="JSContext connect"/>
+                                <connections>
+                                    <action selector="handleJSContextConnect:" destination="whP-gf-Uak" eventType="touchUpInside" id="q4Z-j7-UQ3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3ed-II-OdN">
+                                <rect key="frame" x="208" y="86" width="151" height="30"/>
+                                <state key="normal" title="JSContext disconnect"/>
+                                <connections>
+                                    <action selector="handleJSContextDisconnect:" destination="whP-gf-Uak" eventType="touchUpInside" id="2LX-kd-pKz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="baR-e3-W6O">
+                                <rect key="frame" x="16" y="107" width="57" height="30"/>
+                                <state key="normal" title="Runtime"/>
+                                <connections>
+                                    <action selector="handleJSContextRuntimeCommand:" destination="whP-gf-Uak" eventType="touchUpInside" id="jRA-Fo-Ewv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ly9-oC-Vq9">
+                                <rect key="frame" x="89" y="107" width="69" height="30"/>
+                                <state key="normal" title="Debugger"/>
+                                <connections>
+                                    <action selector="handleJSContextDebuggerCommand:" destination="whP-gf-Uak" eventType="touchUpInside" id="Lht-pq-MBM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aDc-it-18E">
+                                <rect key="frame" x="16" y="264" width="147" height="30"/>
+                                <state key="normal" title="WKWebView connect"/>
+                                <connections>
+                                    <action selector="handleWebViewConnect:" destination="whP-gf-Uak" eventType="touchUpInside" id="2vP-Ki-CUh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sIC-jZ-aZA">
+                                <rect key="frame" x="16" y="328" width="56" height="30"/>
+                                <state key="normal" title="Browser"/>
+                                <connections>
+                                    <action selector="handleWebViewBrowserCommand:" destination="whP-gf-Uak" eventType="touchUpInside" id="uQI-9b-0bq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VtL-DF-bFr">
+                                <rect key="frame" x="88" y="328" width="35" height="30"/>
+                                <state key="normal" title="Page"/>
+                                <connections>
+                                    <action selector="handleWebViewPageCommand:" destination="whP-gf-Uak" eventType="touchUpInside" id="2u5-c3-Geh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mwy-Zh-g6U">
+                                <rect key="frame" x="185" y="328" width="69" height="30"/>
+                                <state key="normal" title="Debugger"/>
+                                <connections>
+                                    <action selector="handleWebViewDebuggerCommand:" destination="whP-gf-Uak" eventType="touchUpInside" id="opA-TP-Skd"/>
+                                </connections>
+                            </button>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sKB-Uh-fFm">
+                                <rect key="frame" x="0.0" y="374" width="375" height="293"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="let a = 10;" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="dva-0B-npq">
+                                <rect key="frame" x="16" y="153" width="273" height="94"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="273" id="Nhd-No-LCP"/>
+                                    <constraint firstAttribute="height" constant="94" id="YxQ-q7-T2F"/>
+                                </constraints>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MrH-xO-giC">
+                                <rect key="frame" x="329" y="185" width="30" height="30"/>
+                                <state key="normal" title="Run"/>
+                                <connections>
+                                    <action selector="handleJSContextScriptRun:" destination="whP-gf-Uak" eventType="touchUpInside" id="Fnp-I3-0ur"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TP9-ei-vI4">
+                                <rect key="frame" x="16" y="31" width="99" height="30"/>
+                                <state key="normal" title="enableMonitor"/>
+                                <connections>
+                                    <action selector="handleEnableMonitor:" destination="whP-gf-Uak" eventType="touchUpInside" id="xYh-ES-w0B"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tcm-c2-HZZ">
+                                <rect key="frame" x="257" y="31" width="102" height="30"/>
+                                <state key="normal" title="disableMonitor"/>
+                                <connections>
+                                    <action selector="handleDisableMonitor:" destination="whP-gf-Uak" eventType="touchUpInside" id="6Ir-MH-d0o"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JRF-cB-6iX">
+                                <rect key="frame" x="192" y="264" width="167" height="30"/>
+                                <state key="normal" title="WKWebView disconnect"/>
+                                <connections>
+                                    <action selector="handleWebViewDisconnect:" destination="whP-gf-Uak" eventType="touchUpInside" id="S4F-wl-1bG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1E4-T1-3pp">
+                                <rect key="frame" x="139" y="328" width="30" height="30"/>
+                                <state key="normal" title="CSS"/>
+                                <connections>
+                                    <action selector="handleWebViewCSSCommand:" destination="whP-gf-Uak" eventType="touchUpInside" id="hgH-t0-KXz"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="NdI-ej-vku"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Uwk-ip-Ikb" firstAttribute="leading" secondItem="NdI-ej-vku" secondAttribute="leading" constant="16" id="0K5-5y-pLf"/>
+                            <constraint firstItem="Uwk-ip-Ikb" firstAttribute="top" secondItem="NdI-ej-vku" secondAttribute="top" constant="86" id="1Bq-Kh-oQy"/>
+                            <constraint firstItem="dva-0B-npq" firstAttribute="leading" secondItem="NdI-ej-vku" secondAttribute="leading" constant="16" id="2G5-XN-S9n"/>
+                            <constraint firstItem="1E4-T1-3pp" firstAttribute="leading" secondItem="VtL-DF-bFr" secondAttribute="trailing" constant="16" id="3V4-mW-p2i"/>
+                            <constraint firstItem="TP9-ei-vI4" firstAttribute="top" secondItem="NdI-ej-vku" secondAttribute="top" constant="31" id="4CM-JL-tBc"/>
+                            <constraint firstItem="tcm-c2-HZZ" firstAttribute="centerY" secondItem="TP9-ei-vI4" secondAttribute="centerY" id="8dh-BZ-viS"/>
+                            <constraint firstItem="VtL-DF-bFr" firstAttribute="leading" secondItem="sIC-jZ-aZA" secondAttribute="trailing" constant="16" id="9xN-Cx-Zgr"/>
+                            <constraint firstItem="sIC-jZ-aZA" firstAttribute="leading" secondItem="NdI-ej-vku" secondAttribute="leading" constant="16" id="A1f-KW-Yhb"/>
+                            <constraint firstItem="Ly9-oC-Vq9" firstAttribute="top" secondItem="Uwk-ip-Ikb" secondAttribute="bottom" constant="-9" id="AKw-QK-RM8"/>
+                            <constraint firstItem="mwy-Zh-g6U" firstAttribute="top" secondItem="JRF-cB-6iX" secondAttribute="bottom" constant="34" id="BNz-Sh-zFo"/>
+                            <constraint firstItem="JRF-cB-6iX" firstAttribute="top" secondItem="3ed-II-OdN" secondAttribute="bottom" constant="148" id="BTb-7T-SLe"/>
+                            <constraint firstItem="NdI-ej-vku" firstAttribute="trailing" secondItem="JRF-cB-6iX" secondAttribute="trailing" constant="16" id="BVm-pU-1sX"/>
+                            <constraint firstItem="TP9-ei-vI4" firstAttribute="leading" secondItem="NdI-ej-vku" secondAttribute="leading" constant="16" id="Baq-Hp-YUo"/>
+                            <constraint firstItem="baR-e3-W6O" firstAttribute="top" secondItem="Uwk-ip-Ikb" secondAttribute="bottom" constant="-9" id="EuI-pj-WSX"/>
+                            <constraint firstItem="tcm-c2-HZZ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="TP9-ei-vI4" secondAttribute="trailing" constant="8" symbolic="YES" id="KA5-ok-Dt6"/>
+                            <constraint firstItem="NdI-ej-vku" firstAttribute="trailing" secondItem="sKB-Uh-fFm" secondAttribute="trailing" id="KM8-9g-hMQ"/>
+                            <constraint firstItem="NdI-ej-vku" firstAttribute="trailing" secondItem="tcm-c2-HZZ" secondAttribute="trailing" constant="16" id="MQx-AR-JY7"/>
+                            <constraint firstItem="sKB-Uh-fFm" firstAttribute="top" secondItem="sIC-jZ-aZA" secondAttribute="bottom" constant="16" id="N6J-Mc-5BQ"/>
+                            <constraint firstItem="baR-e3-W6O" firstAttribute="leading" secondItem="NdI-ej-vku" secondAttribute="leading" constant="16" id="NK6-xX-Q8n"/>
+                            <constraint firstItem="Ly9-oC-Vq9" firstAttribute="leading" secondItem="baR-e3-W6O" secondAttribute="trailing" constant="16" id="Nuo-0y-mQE"/>
+                            <constraint firstItem="sIC-jZ-aZA" firstAttribute="top" secondItem="aDc-it-18E" secondAttribute="bottom" constant="34" id="OnB-vy-G9I"/>
+                            <constraint firstItem="dva-0B-npq" firstAttribute="top" secondItem="Ly9-oC-Vq9" secondAttribute="bottom" constant="16" id="Ram-zN-iZ0"/>
+                            <constraint firstItem="sKB-Uh-fFm" firstAttribute="leading" secondItem="NdI-ej-vku" secondAttribute="leading" id="Y7B-wS-rWv"/>
+                            <constraint firstItem="3ed-II-OdN" firstAttribute="centerY" secondItem="Uwk-ip-Ikb" secondAttribute="centerY" id="arY-GL-jU9"/>
+                            <constraint firstItem="aDc-it-18E" firstAttribute="top" secondItem="Uwk-ip-Ikb" secondAttribute="bottom" constant="148" id="c9J-vV-Not"/>
+                            <constraint firstItem="1E4-T1-3pp" firstAttribute="top" secondItem="JRF-cB-6iX" secondAttribute="bottom" constant="34" id="cdF-33-ao2"/>
+                            <constraint firstItem="NdI-ej-vku" firstAttribute="bottom" secondItem="sKB-Uh-fFm" secondAttribute="bottom" id="czq-fD-wxU"/>
+                            <constraint firstItem="VtL-DF-bFr" firstAttribute="top" secondItem="aDc-it-18E" secondAttribute="bottom" constant="34" id="k5k-2L-DnA"/>
+                            <constraint firstItem="mwy-Zh-g6U" firstAttribute="leading" secondItem="1E4-T1-3pp" secondAttribute="trailing" constant="16" id="q66-Fp-1kI"/>
+                            <constraint firstItem="MrH-xO-giC" firstAttribute="centerY" secondItem="dva-0B-npq" secondAttribute="centerY" id="rPK-oV-Mmo"/>
+                            <constraint firstItem="aDc-it-18E" firstAttribute="leading" secondItem="NdI-ej-vku" secondAttribute="leading" constant="16" id="ryY-wl-jYB"/>
+                            <constraint firstItem="NdI-ej-vku" firstAttribute="trailing" secondItem="MrH-xO-giC" secondAttribute="trailing" constant="16" id="s1v-Cs-zvJ"/>
+                            <constraint firstItem="NdI-ej-vku" firstAttribute="trailing" secondItem="3ed-II-OdN" secondAttribute="trailing" constant="16" id="u8S-J9-ekd"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="scriptTextView" destination="dva-0B-npq" id="HSN-vk-QNI"/>
+                        <outlet property="webView" destination="sKB-Uh-fFm" id="xzO-Ho-qVL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tc2-Qw-aMS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="305" y="433"/>
+            <point key="canvasLocation" x="304.80000000000001" y="432.23388305847078"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>

@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		201EAD1F28C268190073A268 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 201EAD1E28C268190073A268 /* WebKit.framework */; };
 		37AAA68A482C6EE9FE73D7A3 /* Pods_YSRemoteInspector_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 478601622344AB6CE72C795F /* Pods_YSRemoteInspector_Tests.framework */; };
 		4C07E116282AF0F9E30D3F23 /* Pods_YSRemoteInspector_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB82F52257E75C90B4C5E440 /* Pods_YSRemoteInspector_Example.framework */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
@@ -38,6 +39,7 @@
 
 /* Begin PBXFileReference section */
 		05BCA7840CA8A9DDC967A062 /* Pods-YSRemoteInspector_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YSRemoteInspector_Tests.debug.xcconfig"; path = "Target Support Files/Pods-YSRemoteInspector_Tests/Pods-YSRemoteInspector_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		201EAD1E28C268190073A268 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		478601622344AB6CE72C795F /* Pods_YSRemoteInspector_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YSRemoteInspector_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58A195388D20070C39A /* YSRemoteInspector_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YSRemoteInspector_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -59,14 +61,14 @@
 		6003F5BB195388D20070C39A /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		7C396EDBBAC4DF42A31268CB /* YSRemoteInspector.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = YSRemoteInspector.podspec; path = ../YSRemoteInspector.podspec; sourceTree = "<group>"; };
+		7C396EDBBAC4DF42A31268CB /* YSRemoteInspector.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = YSRemoteInspector.podspec; path = ../YSRemoteInspector.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		83D5D0CD688091B79D22A5C4 /* Pods-YSRemoteInspector_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YSRemoteInspector_Example.debug.xcconfig"; path = "Target Support Files/Pods-YSRemoteInspector_Example/Pods-YSRemoteInspector_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		9C903C77B2C3D5DD4CC3A8FC /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		9C903C77B2C3D5DD4CC3A8FC /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		9E160F0965BDD8849D3225B6 /* Pods-YSRemoteInspector_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YSRemoteInspector_Example.release.xcconfig"; path = "Target Support Files/Pods-YSRemoteInspector_Example/Pods-YSRemoteInspector_Example.release.xcconfig"; sourceTree = "<group>"; };
 		BCA7A42A8656768EDE5F1B12 /* Pods-YSRemoteInspector_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YSRemoteInspector_Tests.release.xcconfig"; path = "Target Support Files/Pods-YSRemoteInspector_Tests/Pods-YSRemoteInspector_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		CB82F52257E75C90B4C5E440 /* Pods_YSRemoteInspector_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YSRemoteInspector_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E596C1089269C2A27544BEDB /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		E596C1089269C2A27544BEDB /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				201EAD1F28C268190073A268 /* WebKit.framework in Frameworks */,
 				6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */,
 				6003F592195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F58E195388D20070C39A /* Foundation.framework in Frameworks */,
@@ -119,6 +122,7 @@
 		6003F58C195388D20070C39A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				201EAD1E28C268190073A268 /* WebKit.framework */,
 				6003F58D195388D20070C39A /* Foundation.framework */,
 				6003F58F195388D20070C39A /* CoreGraphics.framework */,
 				6003F591195388D20070C39A /* UIKit.framework */,
@@ -193,7 +197,6 @@
 				05BCA7840CA8A9DDC967A062 /* Pods-YSRemoteInspector_Tests.debug.xcconfig */,
 				BCA7A42A8656768EDE5F1B12 /* Pods-YSRemoteInspector_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -254,10 +257,11 @@
 				};
 			};
 			buildConfigurationList = 6003F585195388D10070C39A /* Build configuration list for PBXProject "YSRemoteInspector" */;
-			compatibilityVersion = "Xcode 3.2";
+			compatibilityVersion = "Xcode 10.0";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -494,9 +498,13 @@
 			baseConfigurationReference = 83D5D0CD688091B79D22A5C4 /* Pods-YSRemoteInspector_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "compiler-default";
+				DEVELOPMENT_TEAM = BGQ8WB468K;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "YSRemoteInspector/YSRemoteInspector-Prefix.pch";
 				INFOPLIST_FILE = "YSRemoteInspector/YSRemoteInspector-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -510,9 +518,13 @@
 			baseConfigurationReference = 9E160F0965BDD8849D3225B6 /* Pods-YSRemoteInspector_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "compiler-default";
+				DEVELOPMENT_TEAM = BGQ8WB468K;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "YSRemoteInspector/YSRemoteInspector-Prefix.pch";
 				INFOPLIST_FILE = "YSRemoteInspector/YSRemoteInspector-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";

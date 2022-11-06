@@ -2,8 +2,8 @@
 //  YSRemoteInspectorTests.m
 //  YSRemoteInspectorTests
 //
-//  Created by oubaiquan on 09/02/2022.
-//  Copyright (c) 2022 oubaiquan. All rights reserved.
+//  Created by youngsoft on 09/02/2022.
+//  Copyright (c) 2022 youngsoft. All rights reserved.
 //
 
 @import XCTest;
