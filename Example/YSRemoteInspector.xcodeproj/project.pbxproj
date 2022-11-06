@@ -326,13 +326,12 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-YSRemoteInspector_Example/Pods-YSRemoteInspector_Example-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/YSRemoteInspector/YSRemoteInspector.framework",
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-YSRemoteInspector_Example/Pods-YSRemoteInspector_Example-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YSRemoteInspector.framework",
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-YSRemoteInspector_Example/Pods-YSRemoteInspector_Example-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
