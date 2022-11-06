@@ -36,7 +36,7 @@ TODO: Add long description of the pod here.
   #   'YSRemoteInspector' => ['YSRemoteInspector/Assets/*.png']
   # }
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
+  s.public_header_files = 'YSRemoteInspector/Classes/YSRemoteInspector.h'
   # s.frameworks = 'UIKit', 'MapKit'
   # s.dependency 'AFNetworking', '~> 2.3'
 end
