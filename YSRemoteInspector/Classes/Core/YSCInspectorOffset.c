@@ -57,7 +57,10 @@ uint16_t YSCGetJSGlobalObjectDebuggableOffset() {
     static uint16_t jsglobalobject_debuggable_offset;
     if (jsglobalobject_debuggable_offset == 0) {
         YSCFuncAddr remoteDebuggingEnabledFuncAddr = NULL;
-        ysc_GetFuncAddrHelper(&remoteDebuggingEnabledFuncAddr, "_ZNK3JSC14JSGlobalObject22remoteDebuggingEnabledEv");
+        ysc_GetFuncAddrHelper(&remoteDebuggingEnabledFuncAddr, "_ZNK3JSC14JSGlobalObject14setInspectableEb");
+        if (remoteDebuggingEnabledFuncAddr == NULL) {
+            ysc_GetFuncAddrHelper(&remoteDebuggingEnabledFuncAddr, "_ZNK3JSC14JSGlobalObject22remoteDebuggingEnabledEv");
+        }
         if (remoteDebuggingEnabledFuncAddr != NULL) {
 #if __arm64__
             /*

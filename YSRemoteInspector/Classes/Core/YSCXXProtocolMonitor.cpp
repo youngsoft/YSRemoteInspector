@@ -112,7 +112,7 @@ void ProtocolMonitor::alterFrontendChannelVTable(FrontendChannel &channel) {
     }
 }
 
-void ProtocolMonitor::alertJSGlobalObjectDebuggableVTable(void *debuggable) {
+void ProtocolMonitor::alterJSGlobalObjectDebuggableVTable(void *debuggable) {
     if (debuggable != nullptr) {
         void **virtualTable = *(void ***)debuggable;
         void *currentConnect = virtualTable[YSCVTABLE_CONNECT_INDEX];
@@ -128,7 +128,7 @@ void ProtocolMonitor::alertJSGlobalObjectDebuggableVTable(void *debuggable) {
     }
 }
 
-void ProtocolMonitor::alertWebPageProxyDebuggableVTable(void *debuggable) {
+void ProtocolMonitor::alterWebPageProxyDebuggableVTable(void *debuggable) {
     if (debuggable != nullptr) {
         void **virtualTable = *(void ***)debuggable;
         void *currentConnect = virtualTable[YSCVTABLE_CONNECT_INDEX];
@@ -162,10 +162,10 @@ void YSCInspectorEnableProtocolMonitor(void *jsGlobalObject, void *webPageProxy,
     _ys_monitor = new YSCXX::ProtocolMonitor(callback);
     
     uint16_t jsGlobalObjectDebuggableOffset = YSCGetJSGlobalObjectDebuggableOffset();
-    _ys_monitor->alertJSGlobalObjectDebuggableVTable(*(void **)((unsigned long)jsGlobalObject + jsGlobalObjectDebuggableOffset));
+    _ys_monitor->alterJSGlobalObjectDebuggableVTable(*(void **)((unsigned long)jsGlobalObject + jsGlobalObjectDebuggableOffset));
             
     uint16_t webPageProxyDebuggableOffset = YSCGetWebPageProxyDebuggableOffset();
-    _ys_monitor->alertWebPageProxyDebuggableVTable(*(void **)((unsigned long)webPageProxy + webPageProxyDebuggableOffset));
+    _ys_monitor->alterWebPageProxyDebuggableVTable(*(void **)((unsigned long)webPageProxy + webPageProxyDebuggableOffset));
 #endif
 }
 

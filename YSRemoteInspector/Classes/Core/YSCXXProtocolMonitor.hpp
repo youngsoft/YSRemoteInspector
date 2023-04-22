@@ -26,8 +26,8 @@ public:
 
     ProtocolMonitor(YSCInspectorCallback callback);
     void messageCallback(const String &message, unsigned long origin);
-    void alertWebPageProxyDebuggableVTable(void *debuggable);
-    void alertJSGlobalObjectDebuggableVTable(void *debuggable);
+    void alterWebPageProxyDebuggableVTable(void *debuggable);
+    void alterJSGlobalObjectDebuggableVTable(void *debuggable);
     void alterFrontendChannelVTable(FrontendChannel &channel);
                 
     static void JSGlobalObjectDebuggableConnectHook(RemoteInspectionTarget *pThis, FrontendChannel &channel, bool isAutomaticConnection, bool immediatelyPause);
